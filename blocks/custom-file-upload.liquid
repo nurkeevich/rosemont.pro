@@ -1,0 +1,277 @@
+{% liquid
+  assign block_settings = block.settings
+  assign wrapper_id = 'CustomFileUpload-' | append: block.id
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+%}
+
+<div id="{{ wrapper_id }}" class="custom-upload-wrapper" {{ block.shopify_attributes }}>
+  <label class="custom-upload-label">
+    {{ block_settings.upload_label | default: 'Upload Your Logo / Design' }}
+  </label>
+
+  <div class="custom-upload-zone">
+    <input
+      type="file"
+      class="custom-upload-input"
+      multiple
+      accept=".jpg,.jpeg,.png,.gif,.pdf,.ai,.svg,.eps,.psd"
+    >
+
+    <span class="custom-upload-hint">
+      {{ block_settings.helper_text | default: 'Drag & drop or click to upload your logo/design files' }}
+    </span>
+
+    <button type="button" class="custom-upload-btn">
+      {{ block_settings.button_text | default: 'Browse Files' }}
+    </button>
+  </div>
+
+  <div class="custom-upload-preview custom-upload-hidden">
+    <p><strong>Selected files:</strong></p>
+    <ul class="custom-upload-file-list"></ul>
+
+    <button type="button" class="custom-upload-remove">
+      Remove
+    </button>
+  </div>
+
+  <p class="custom-upload-error custom-upload-hidden"></p>
+</div>
+
+<style>
+  #{{ wrapper_id }} {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  #{{ wrapper_id }} .custom-upload-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  #{{ wrapper_id }} .custom-upload-zone {
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    background: #f9f9f9;
+  }
+
+  #{{ wrapper_id }} .custom-upload-input {
+    display: none;
+  }
+
+  #{{ wrapper_id }} .custom-upload-hint {
+    display: block;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+  }
+
+  #{{ wrapper_id }} .custom-upload-btn,
+  #{{ wrapper_id }} .custom-upload-remove {
+    padding: 10px 18px;
+    border: 1px solid #000;
+    background: #000;
+    color: #fff !important;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  #{{ wrapper_id }} .custom-upload-preview {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+  }
+
+  #{{ wrapper_id }} .custom-upload-file-list {
+    margin: 8px 0 12px;
+    padding-left: 20px;
+  }
+
+  #{{ wrapper_id }} .custom-upload-error {
+    color: red;
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  #{{ wrapper_id }} .custom-upload-hidden {
+    display: none;
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var wrapper = document.querySelector('#{{ wrapper_id }}');
+  if (!wrapper) return;
+
+  var productForm = document.querySelector('#{{ product_form_id }}');
+  if (!productForm) return;
+
+  var zone = wrapper.querySelector('.custom-upload-zone');
+  var input = wrapper.querySelector('.custom-upload-input');
+  var btn = wrapper.querySelector('.custom-upload-btn');
+  var preview = wrapper.querySelector('.custom-upload-preview');
+  var fileList = wrapper.querySelector('.custom-upload-file-list');
+  var removeBtn = wrapper.querySelector('.custom-upload-remove');
+  var error = wrapper.querySelector('.custom-upload-error');
+
+  var allowedExtensions = ['jpg', 'jpeg', 'png', 'gif', 'pdf', 'ai', 'svg', 'eps', 'psd'];
+  var maxSizeMB = {{ block_settings.max_file_size | default: 25 }};
+  var maxFiles = {{ block_settings.max_files | default: 5 }};
+
+  function showError(message) {
+    error.textContent = message;
+    error.classList.remove('custom-upload-hidden');
+  }
+
+  function clearError() {
+    error.textContent = '';
+    error.classList.add('custom-upload-hidden');
+  }
+
+  function removeHiddenFiles() {
+    productForm.querySelectorAll('.custom-hidden-upload-{{ block.id }}').forEach(function (item) {
+      item.remove();
+    });
+  }
+
+  function clearFiles() {
+    input.value = '';
+    fileList.innerHTML = '';
+    preview.classList.add('custom-upload-hidden');
+    zone.classList.remove('custom-upload-hidden');
+    removeHiddenFiles();
+    clearError();
+  }
+
+  function validateFile(file) {
+    var extension = file.name.split('.').pop().toLowerCase();
+
+    if (!allowedExtensions.includes(extension)) {
+      showError('Invalid file type.');
+      return false;
+    }
+
+    if (file.size > maxSizeMB * 1024 * 1024) {
+      showError('File is too large. Maximum size is ' + maxSizeMB + 'MB per file.');
+      return false;
+    }
+
+    return true;
+  }
+
+  function addFilesToProductForm(files) {
+    removeHiddenFiles();
+
+    files.forEach(function (file, index) {
+      var hiddenFileInput = document.createElement('input');
+      hiddenFileInput.type = 'file';
+      hiddenFileInput.className = 'custom-hidden-upload-{{ block.id }}';
+      hiddenFileInput.name = 'properties[Logo Upload ' + (index + 1) + ']';
+      hiddenFileInput.style.display = 'none';
+
+      var dataTransfer = new DataTransfer();
+      dataTransfer.items.add(file);
+      hiddenFileInput.files = dataTransfer.files;
+
+      productForm.appendChild(hiddenFileInput);
+    });
+  }
+
+  function handleFiles(files) {
+    clearError();
+
+    if (files.length > maxFiles) {
+      showError('You can upload maximum ' + maxFiles + ' files.');
+      return;
+    }
+
+    for (var i = 0; i < files.length; i++) {
+      if (!validateFile(files[i])) return;
+    }
+
+    addFilesToProductForm(files);
+
+    fileList.innerHTML = '';
+    files.forEach(function (file, index) {
+      var li = document.createElement('li');
+      li.textContent = 'File ' + (index + 1) + ': ' + file.name;
+      fileList.appendChild(li);
+    });
+
+    zone.classList.add('custom-upload-hidden');
+    preview.classList.remove('custom-upload-hidden');
+  }
+
+  zone.addEventListener('click', function () {
+    input.click();
+  });
+
+  btn.addEventListener('click', function (event) {
+    event.stopPropagation();
+    input.click();
+  });
+
+  input.addEventListener('change', function () {
+    var files = Array.from(input.files);
+    if (files.length > 0) handleFiles(files);
+  });
+
+  removeBtn.addEventListener('click', clearFiles);
+});
+</script>
+
+{% schema %}
+{
+  "name": "Custom File Upload",
+  "settings": [
+    {
+      "type": "text",
+      "id": "upload_label",
+      "label": "Upload Label",
+      "default": "Upload Your Logo / Design"
+    },
+    {
+      "type": "text",
+      "id": "helper_text",
+      "label": "Helper Text",
+      "default": "Drag & drop or click to upload your logo/design files"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Browse Files"
+    },
+    {
+      "type": "range",
+      "id": "max_files",
+      "label": "Maximum Files",
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "default": 5
+    },
+    {
+      "type": "range",
+      "id": "max_file_size",
+      "label": "Maximum File Size MB",
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "default": 25
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom File Upload",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

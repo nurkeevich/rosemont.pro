@@ -1,0 +1,66 @@
+{% liquid
+  assign block_settings = block.settings
+  assign element_id = 'CustomTextInput-' | append: block.id
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+  assign property_name = block_settings.label | default: 'Custom Text'
+%}
+
+<div class="custom-text-input" {{ block.shopify_attributes }}>
+  <label for="{{ element_id }}">
+    {{ property_name }}
+  </label>
+
+  <input
+    id="{{ element_id }}"
+    type="text"
+    name="properties[{{ property_name | escape }}]"
+    form="{{ product_form_id }}"
+    placeholder="{{ block_settings.placeholder | escape }}"
+  >
+</div>
+
+<style>
+  .custom-text-input {
+    margin-bottom: 16px;
+  }
+
+  .custom-text-input label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .custom-text-input input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Text Input",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Field Label",
+      "default": "Company Name"
+    },
+    {
+      "type": "text",
+      "id": "placeholder",
+      "label": "Placeholder",
+      "default": "Enter company name"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Text Input",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
