@@ -1,47 +1,50 @@
 {% liquid
   assign block_settings = block.settings
-  assign element_id = 'CustomTextInput-' | append: block.id
+  assign element_id = 'CustomMultiLineTextInput-' | append: block.id
   assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
   assign property_name = block_settings.label | default: 'Custom Text'
 %}
 
-<div class="custom-text-input" {{ block.shopify_attributes }}>
+<div class="custom-multi-line-text-input" {{ block.shopify_attributes }}>
   <label for="{{ element_id }}">
     {{ property_name }}
   </label>
 
-  <input
+  <textarea
     id="{{ element_id }}"
-    type="text"
     name="properties[{{ property_name | escape }}]"
     form="{{ product_form_id }}"
     placeholder="{{ block_settings.placeholder | escape }}"
-  >
+    rows="{{ block_settings.rows | default: 4 }}"
+  ></textarea>
 </div>
 
 <style>
-  .custom-text-input {
+  .custom-multi-line-text-input {
     margin-bottom: 16px;
   }
 
-  .custom-text-input label {
+  .custom-multi-line-text-input label {
     display: block;
     font-weight: 600;
     margin-bottom: 6px;
   }
 
-  .custom-text-input input {
+  .custom-multi-line-text-input textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 6px;
     font-size: 14px;
+    min-height: 80px;
+    resize: vertical;
+    font-family: inherit;
   }
 </style>
 
 {% schema %}
 {
-  "name": "Custom Text Input",
+  "name": "Custom Multi Line Input",
   "settings": [
     {
       "type": "text",
@@ -54,11 +57,20 @@
       "id": "placeholder",
       "label": "Placeholder",
       "default": "Default placeholder"
+    },
+    {
+      "type": "range",
+      "id": "rows",
+      "label": "Visible rows",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 4
     }
   ],
   "presets": [
     {
-      "name": "Custom Text Input",
+      "name": "Custom Multi Line Input",
       "category": "Product"
     }
   ]
