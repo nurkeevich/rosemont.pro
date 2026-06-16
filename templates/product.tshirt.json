@@ -189,12 +189,13 @@
               },
               "blocks": {}
             },
-            "custom_text_input_kDNaJT": {
-              "type": "custom-text-input",
-              "name": "Custom Text Input",
+            "custome_multi_line_text_input_RktqwQ": {
+              "type": "custome-multi-line-text-input",
+              "name": "Custom Multi Line Input",
               "settings": {
                 "label": "Message",
-                "placeholder": "Please include as much information as possible."
+                "placeholder": "Please give us as much details as possible",
+                "rows": 4
               },
               "blocks": {}
             },
@@ -896,7 +897,7 @@
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
             "variant_picker_NYNfW9",
-            "custom_text_input_kDNaJT",
+            "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
             "buy_buttons_rhMNwM",
