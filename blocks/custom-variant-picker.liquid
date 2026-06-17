@@ -1,0 +1,124 @@
+{% liquid
+  assign block_settings = block.settings
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+  assign property_name = block_settings.label | default: 'Option'
+  assign field_name = 'CustomVariantPicker-' | append: block.id
+  assign values_raw = block_settings.values | default: 'Option 1, Option 2, Option 3'
+  assign values_normalized = values_raw | newline_to_br | replace: '<br />', ',' | split: ','
+  assign first_value = blank
+  for value in values_normalized
+    assign value_stripped = value | strip
+    if value_stripped != blank
+      assign first_value = value_stripped
+      break
+    endif
+  endfor
+%}
+
+<div
+  class="custom-variant-picker"
+  data-custom-variant-picker
+  {{ block.shopify_attributes }}
+>
+  <fieldset
+    class="variant-option variant-option--fieldset variant-option--buttons"
+    style="--border-radius: {{ block_settings.buttons_radius }}px;"
+  >
+    <div class="variant-option__label flex flex-wrap justify-between items-center gap-3 w-full p-0">
+      <div class="variant-option__label-content flex items-center gap-1">
+        <span class="h6 variant-option__label-text">
+          {{- property_name | append: ': ' | escape -}}
+        </span>
+        <span class="variant-option__label-value color-subtext" data-custom-variant-picker-value>
+          {{- first_value | escape -}}
+        </span>
+      </div>
+    </div>
+
+    {%- for value in values_normalized -%}
+      {%- assign value_stripped = value | strip -%}
+      {%- if value_stripped != blank -%}
+        <label class="variant-option__button-label focus-within--absolute">
+          <input
+            type="radio"
+            name="{{ field_name }}"
+            form="{{ product_form_id }}"
+            value="{{ value_stripped | escape }}"
+            data-property-name="{{ property_name | escape }}"
+            data-property-input
+            aria-label="{{ value_stripped | escape }}"
+            {% if value_stripped == first_value %}checked{% endif %}
+          >
+          <span class="variant-option__button-label__text">
+            {{- value_stripped | escape -}}
+          </span>
+        </label>
+      {%- endif -%}
+    {%- endfor -%}
+  </fieldset>
+
+  <input
+    type="hidden"
+    name="properties[{{ property_name | escape }}]"
+    form="{{ product_form_id }}"
+    value="{{ first_value | escape }}"
+    data-custom-variant-picker-hidden
+  >
+</div>
+
+<script>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root?.matches('[data-custom-variant-picker]')) return;
+
+    const valueLabel = root.querySelector('[data-custom-variant-picker-value]');
+    const hiddenInput = root.querySelector('[data-custom-variant-picker-hidden]');
+    const radios = root.querySelectorAll('[data-property-input]');
+
+    radios.forEach((radio) => {
+      radio.addEventListener('change', () => {
+        if (!radio.checked) return;
+        if (valueLabel) valueLabel.textContent = radio.value;
+        if (hiddenInput) hiddenInput.value = radio.value;
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Custom Variant Picker",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Field label",
+      "default": "Color"
+    },
+    {
+      "type": "textarea",
+      "id": "values",
+      "label": "Options",
+      "default": "Black, Orange, Green",
+      "info": "Comma-separated or one option per line"
+    },
+    {
+      "type": "range",
+      "id": "buttons_radius",
+      "label": "Button border radius",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Variant Picker",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}

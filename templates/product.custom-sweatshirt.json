@@ -169,7 +169,7 @@
                 "product_description_DwV47J"
               ]
             },
-            "variant_picker_NYNfW9": {
+            "variant_picker_EYq93X": {
               "type": "_variant-picker",
               "name": "t:names.variant_picker",
               "settings": {
@@ -178,10 +178,10 @@
                 "show_variant_image": false,
                 "swatch_shape": "square",
                 "swatch_width": 52,
-                "swatch_height": 32,
+                "swatch_height": 24,
                 "buttons_radius": 0,
-                "size_chart_title": "Size",
-                "size_chart_page": "product-size-chart",
+                "size_chart_title": "",
+                "size_chart_page": "",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -245,12 +245,13 @@
                   "type": "_add-to-card-button",
                   "static": true,
                   "settings": {
-                    "style": "secondary"
+                    "style": "primary"
                   },
                   "blocks": {}
                 },
                 "accelerated-checkout": {
                   "type": "_accelerated-checkout",
+                  "disabled": true,
                   "static": true,
                   "settings": {},
                   "blocks": {}
@@ -382,7 +383,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["icon_8nYx8X", "text_3JgwqJ"]
+                  "block_order": [
+                    "icon_8nYx8X",
+                    "text_3JgwqJ"
+                  ]
                 },
                 "group_tDdQwH": {
                   "type": "group",
@@ -469,7 +473,10 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["icon_UwbpmT", "text_VrT8cz"]
+                  "block_order": [
+                    "icon_UwbpmT",
+                    "text_VrT8cz"
+                  ]
                 },
                 "group_wXJd6h": {
                   "type": "group",
@@ -556,10 +563,17 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["icon_7CdXmV", "text_YPaWtU"]
+                  "block_order": [
+                    "icon_7CdXmV",
+                    "text_YPaWtU"
+                  ]
                 }
               },
-              "block_order": ["group_kmCAJc", "group_tDdQwH", "group_wXJd6h"]
+              "block_order": [
+                "group_kmCAJc",
+                "group_tDdQwH",
+                "group_wXJd6h"
+              ]
             },
             "pickup_availability_CgeNxU": {
               "type": "_pickup-availability",
@@ -655,7 +669,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_NhECK8"]
+                  "block_order": [
+                    "text_NhECK8"
+                  ]
                 },
                 "accordion_row_eMehRb": {
                   "type": "_accordion-row",
@@ -700,7 +716,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_JNT7ew"]
+                  "block_order": [
+                    "text_JNT7ew"
+                  ]
                 },
                 "accordion_row_iXty6f": {
                   "type": "_accordion-row",
@@ -745,7 +763,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_gd3Lty"]
+                  "block_order": [
+                    "text_gd3Lty"
+                  ]
                 }
               },
               "block_order": [
@@ -896,7 +916,7 @@
           "block_order": [
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
-            "variant_picker_NYNfW9",
+            "variant_picker_EYq93X",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
@@ -947,7 +967,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["divider_KymPXi"],
+      "block_order": [
+        "divider_KymPXi"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width--full",
@@ -1116,7 +1138,11 @@
               "blocks": {}
             }
           },
-          "block_order": ["text_QAPzVE", "text_R4A76j", "text_UA3DdH"]
+          "block_order": [
+            "text_QAPzVE",
+            "text_R4A76j",
+            "text_UA3DdH"
+          ]
         },
         "accordion_CEHJQn": {
           "type": "accordion",
@@ -1187,7 +1213,9 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_4Chq9b"]
+              "block_order": [
+                "text_4Chq9b"
+              ]
             },
             "accordion_row_gpdRVW": {
               "type": "_accordion-row",
@@ -1232,7 +1260,9 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_CRqmAh"]
+              "block_order": [
+                "text_CRqmAh"
+              ]
             },
             "accordion_row_KnjEDB": {
               "type": "_accordion-row",
@@ -1277,7 +1307,9 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_PPYVt9"]
+              "block_order": [
+                "text_PPYVt9"
+              ]
             }
           },
           "block_order": [
@@ -1287,7 +1319,10 @@
           ]
         }
       },
-      "block_order": ["group_w9EG8R", "accordion_CEHJQn"],
+      "block_order": [
+        "group_w9EG8R",
+        "accordion_CEHJQn"
+      ],
       "name": "t:names.faqs_preset_texts",
       "settings": {
         "container": "page-width",
@@ -1404,7 +1439,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_Td8rBG", "button_9YeEPr"]
+              "block_order": [
+                "text_Td8rBG",
+                "button_9YeEPr"
+              ]
             }
           },
           "block_order": []
@@ -1493,7 +1531,10 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_qKyr7r", "button_FmgWEr"]
+              "block_order": [
+                "text_qKyr7r",
+                "button_FmgWEr"
+              ]
             }
           },
           "block_order": []
@@ -1582,13 +1623,20 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_7CyaCK", "button_cwdwzD"]
+              "block_order": [
+                "text_7CyaCK",
+                "button_cwdwzD"
+              ]
             }
           },
           "block_order": []
         }
       },
-      "block_order": ["slide_fx6E64", "slide_C7myGY", "slide_6bjnwN"],
+      "block_order": [
+        "slide_fx6E64",
+        "slide_C7myGY",
+        "slide_6bjnwN"
+      ],
       "name": "t:names.slideshow_centered",
       "settings": {
         "container": "fixed",
@@ -1651,7 +1699,9 @@
               "blocks": {}
             }
           },
-          "block_order": ["text_xNXyL3"]
+          "block_order": [
+            "text_xNXyL3"
+          ]
         }
       },
       "name": "t:names.products_combine",
@@ -1940,7 +1990,9 @@
           ]
         }
       },
-      "block_order": ["marquee_rDcnRX"],
+      "block_order": [
+        "marquee_rDcnRX"
+      ],
       "name": "t:names.marquee",
       "settings": {
         "container": "page-width--full",
@@ -2343,7 +2395,10 @@
           ]
         }
       },
-      "block_order": ["text_MxXVQz", "grid_QdpRKt"],
+      "block_order": [
+        "text_MxXVQz",
+        "grid_QdpRKt"
+      ],
       "custom_css": [],
       "name": "t:names.custom_section",
       "settings": {
@@ -2662,13 +2717,21 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["badge_z9Be9N", "badge_wP3y8Q"]
+              "block_order": [
+                "badge_z9Be9N",
+                "badge_wP3y8Q"
+              ]
             }
           },
-          "block_order": ["image_with_badges_EXjpJe"]
+          "block_order": [
+            "image_with_badges_EXjpJe"
+          ]
         }
       },
-      "block_order": ["group_bT8imD", "group_TetEH7"],
+      "block_order": [
+        "group_bT8imD",
+        "group_TetEH7"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3141,7 +3204,10 @@
               "blocks": {}
             }
           },
-          "block_order": ["simple_text_pFpxfz", "simple_text_heFfa8"]
+          "block_order": [
+            "simple_text_pFpxfz",
+            "simple_text_heFfa8"
+          ]
         }
       },
       "block_order": [
@@ -3291,10 +3357,15 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["badge_DwYcU6", "badge_EPPdwL"]
+              "block_order": [
+                "badge_DwYcU6",
+                "badge_EPPdwL"
+              ]
             }
           },
-          "block_order": ["image_with_badges_RNMBLm"]
+          "block_order": [
+            "image_with_badges_RNMBLm"
+          ]
         },
         "group_q6En8n": {
           "type": "group",
@@ -3457,7 +3528,10 @@
           ]
         }
       },
-      "block_order": ["group_j9VUPG", "group_q6En8n"],
+      "block_order": [
+        "group_j9VUPG",
+        "group_q6En8n"
+      ],
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3529,7 +3603,9 @@
           "blocks": {}
         }
       },
-      "block_order": ["text_9fxqfP"],
+      "block_order": [
+        "text_9fxqfP"
+      ],
       "name": "t:names.product_recommendations",
       "settings": {
         "recommendations_type": "related",
@@ -3815,7 +3891,9 @@
                   "blocks": {}
                 }
               },
-              "block_order": ["text_tGTRjE"]
+              "block_order": [
+                "text_tGTRjE"
+              ]
             },
             "accordion_gfNgJC": {
               "type": "accordion",
@@ -3886,7 +3964,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_VfRwNV"]
+                  "block_order": [
+                    "text_VfRwNV"
+                  ]
                 },
                 "accordion_row_ynWVCR": {
                   "type": "_accordion-row",
@@ -3931,7 +4011,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_tKxVAY"]
+                  "block_order": [
+                    "text_tKxVAY"
+                  ]
                 },
                 "accordion_row_awAzd8": {
                   "type": "_accordion-row",
@@ -3976,7 +4058,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_WXGqtt"]
+                  "block_order": [
+                    "text_WXGqtt"
+                  ]
                 },
                 "accordion_row_r6fVEm": {
                   "type": "_accordion-row",
@@ -4021,7 +4105,9 @@
                       "blocks": {}
                     }
                   },
-                  "block_order": ["text_kiVaET"]
+                  "block_order": [
+                    "text_kiVaET"
+                  ]
                 }
               },
               "block_order": [
@@ -4032,10 +4118,16 @@
               ]
             }
           },
-          "block_order": ["group_cipxHr", "accordion_gfNgJC"]
+          "block_order": [
+            "group_cipxHr",
+            "accordion_gfNgJC"
+          ]
         }
       },
-      "block_order": ["image_card_kEUTWL", "group_MxbTQz"],
+      "block_order": [
+        "image_card_kEUTWL",
+        "group_MxbTQz"
+      ],
       "custom_css": [],
       "name": "t:names.faqs_preset_banner",
       "settings": {
