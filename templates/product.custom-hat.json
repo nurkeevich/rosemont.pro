@@ -189,12 +189,35 @@
               },
               "blocks": {}
             },
+            "custom_variant_picker_98an3w": {
+              "type": "custom-variant-picker",
+              "name": "Custom Variant Picker",
+              "settings": {
+                "label": "Type of work",
+                "values": "Embroidery, 3D Puff, Heat Press",
+                "preselect_first_option": true,
+                "buttons_radius": 0
+              },
+              "blocks": {}
+            },
+            "custom_variant_picker_ym6XrY": {
+              "type": "custom-variant-picker",
+              "name": "Custom Variant Picker",
+              "settings": {
+                "label": "Logo Placement",
+                "values": "Center, Right, Left",
+                "preselect_first_option": true,
+                "buttons_radius": 0
+              },
+              "blocks": {}
+            },
             "custom_variant_picker_8xWjQc": {
               "type": "custom-variant-picker",
               "name": "Custom Variant Picker",
               "settings": {
                 "label": "Side stichings",
-                "values": "Right side, Left side, Back",
+                "values": "Right side, Left side, Back, None",
+                "preselect_first_option": false,
                 "buttons_radius": 0
               },
               "blocks": {}
@@ -927,6 +950,8 @@
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
             "variant_picker_JfgYKg",
+            "custom_variant_picker_98an3w",
+            "custom_variant_picker_ym6XrY",
             "custom_variant_picker_8xWjQc",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
