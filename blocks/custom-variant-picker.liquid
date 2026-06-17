@@ -5,14 +5,16 @@
   assign field_name = 'CustomVariantPicker-' | append: block.id
   assign values_raw = block_settings.values | default: 'Option 1, Option 2, Option 3'
   assign values_normalized = values_raw | newline_to_br | replace: '<br />', ',' | split: ','
-  assign first_value = blank
-  for value in values_normalized
-    assign value_stripped = value | strip
-    if value_stripped != blank
-      assign first_value = value_stripped
-      break
-    endif
-  endfor
+  assign selected_value = blank
+  if block_settings.preselect_first_option
+    for value in values_normalized
+      assign value_stripped = value | strip
+      if value_stripped != blank
+        assign selected_value = value_stripped
+        break
+      endif
+    endfor
+  endif
 %}
 
 <div
@@ -30,7 +32,9 @@
           {{- property_name | append: ': ' | escape -}}
         </span>
         <span class="variant-option__label-value color-subtext" data-custom-variant-picker-value>
-          {{- first_value | escape -}}
+          {%- if selected_value != blank -%}
+            {{- selected_value | escape -}}
+          {%- endif -%}
         </span>
       </div>
     </div>
@@ -47,7 +51,7 @@
             data-property-name="{{ property_name | escape }}"
             data-property-input
             aria-label="{{ value_stripped | escape }}"
-            {% if value_stripped == first_value %}checked{% endif %}
+            {% if selected_value != blank and value_stripped == selected_value %}checked{% endif %}
           >
           <span class="variant-option__button-label__text">
             {{- value_stripped | escape -}}
@@ -61,7 +65,7 @@
     type="hidden"
     name="properties[{{ property_name | escape }}]"
     form="{{ product_form_id }}"
-    value="{{ first_value | escape }}"
+    value="{{ selected_value | escape }}"
     data-custom-variant-picker-hidden
   >
 </div>
@@ -102,6 +106,12 @@
       "label": "Options",
       "default": "Black, Orange, Green",
       "info": "Comma-separated or one option per line"
+    },
+    {
+      "type": "checkbox",
+      "id": "preselect_first_option",
+      "label": "Pre-select first option",
+      "default": false
     },
     {
       "type": "range",
