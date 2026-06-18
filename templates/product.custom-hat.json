@@ -148,7 +148,7 @@
                   "type": "_product-description",
                   "name": "t:names.description",
                   "settings": {
-                    "text": "<p>{{ closest.product.description }}</p>",
+                    "text": "{{ closest.product.description }}",
                     "type_preset": "rte",
                     "font": "var(--font-body--family)",
                     "font_weight": "",
@@ -219,6 +219,14 @@
                 "values": "Right side, Left side, Back, None",
                 "preselect_first_option": false,
                 "buttons_radius": 0
+              },
+              "blocks": {}
+            },
+            "custom_date_picker_MLxNKp": {
+              "type": "custom-date-picker",
+              "name": "Custom Date Picker",
+              "settings": {
+                "label": "When do you need your project completed by?"
               },
               "blocks": {}
             },
@@ -318,7 +326,7 @@
                 "swipe_custom_width_column": false,
                 "swipe_column_width": 76,
                 "columns_mobile": 2,
-                "column_gap_mobile": 12,
+                "column_gap_mobile": 36,
                 "row_gap_mobile": 12,
                 "device": "desktop",
                 "padding-block-start": 0,
@@ -387,7 +395,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Free shipping</p>",
+                        "text": "<p>Fast Turnaround</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -464,7 +472,7 @@
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
-                        "icon": "arrow-up-left-down",
+                        "icon": "check",
                         "icon_size": "custom-size",
                         "width": 32,
                         "width_mobile": 32,
@@ -477,7 +485,7 @@
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Easy return</p>",
+                        "text": "<p>Mockup Approval</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -608,6 +616,22 @@
                 "group_wXJd6h"
               ]
             },
+            "divider_k7YCJF": {
+              "type": "divider",
+              "name": "t:names.divider",
+              "settings": {
+                "thickness": 2,
+                "width_percent": 100,
+                "disable_on_desktop": false,
+                "disable_on_mobile": false,
+                "device": "mobile",
+                "padding-block-start": 40,
+                "padding-block-end": 40,
+                "padding-block-start-mobile": 36,
+                "padding-block-end-mobile": 36
+              },
+              "blocks": {}
+            },
             "pickup_availability_CgeNxU": {
               "type": "_pickup-availability",
               "name": "t:names.pickup_availability",
@@ -663,7 +687,7 @@
                   "type": "_accordion-row",
                   "settings": {
                     "text": "Return policy",
-                    "open_row_by_default": true,
+                    "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
                     "width": 24,
@@ -673,7 +697,7 @@
                     "text_NhECK8": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We accept returns within 30 days of purchase. Please note that all items must be returned in their original condition, including all tags and packaging. Shipping costs are non-refundable.</p>",
+                        "text": "<p>Because all products are custom-made to your specifications, we do not accept returns or exchanges on custom orders once production has begun.</p><p>If there is an issue caused by us, such as:</p><ul><li>Incorrect item received</li><li>Decoration applied differently than approved mockup</li><li>Manufacturing defect</li><li>Damaged item upon delivery</li></ul><p>Please contact us within <strong>7 days of receiving your order</strong>, and we will review the issue and work with you to provide a replacement or appropriate solution.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -709,7 +733,7 @@
                 "accordion_row_eMehRb": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "Shipping",
+                    "text": "Production Timeline",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -720,7 +744,7 @@
                     "text_JNT7ew": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We offer free shipping on all orders over $100. Orders under $100 will be charged a flat rate of $10.</p>",
+                        "text": "<p>Small orders are typically produced and shipped within <strong>1–2 business days</strong> after artwork approval. Larger orders may require additional production time depending on quantity and decoration method.</p><p>Estimated production times:</p><ul><li><strong>1–24 pieces:</strong> 1–2 business days<br/></li><li><strong>25–99 pieces:</strong> 3–5 business days<br/></li><li><strong>100+ pieces:</strong> Custom production timeline provided with your quote<br/></li></ul><p>Once shipped, delivery typically takes <strong>1–5 business days</strong> depending on destination and shipping method.</p><p>Tracking information will be provided when your order ships.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -756,7 +780,7 @@
                 "accordion_row_iXty6f": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "Manufacturing",
+                    "text": "Production Process",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -767,7 +791,7 @@
                     "text_gd3Lty": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our manufacturing blends craftsmanship and innovation — ensuring every piece is made with precision, quality materials, and sustainable practices for lasting style.</p>",
+                        "text": "<p>For the best results, upload high-quality PNG, PDF, AI, SVG, EPS, or PSD files. If your artwork requires adjustments or digitizing, we will contact you before production begins.</p><h6><strong>Process steps</strong></h6><ul><li>Submit your order and artwork</li><li>We review your design and provide a mockup for your approval</li><li>You approve the final design</li><li>We produce and ship your order</li></ul>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -825,6 +849,7 @@
             "promotion_alert_Wp4geP": {
               "type": "_promotion-alert",
               "name": "t:names.promotion_alert",
+              "disabled": true,
               "settings": {
                 "color": "#1469e8",
                 "border_radius": 10,
@@ -914,6 +939,7 @@
             "product_recommendations_CQcChJ": {
               "type": "_product-recommendations",
               "name": "t:names.product_recommendations",
+              "disabled": true,
               "settings": {
                 "recommendations_type": "related",
                 "heading": "Complete The Look",
@@ -953,11 +979,13 @@
             "custom_variant_picker_98an3w",
             "custom_variant_picker_ym6XrY",
             "custom_variant_picker_8xWjQc",
+            "custom_date_picker_MLxNKp",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
             "buy_buttons_rhMNwM",
             "group_ngeVTK",
+            "divider_k7YCJF",
             "pickup_availability_CgeNxU",
             "product_video_testimonials_a37eGn",
             "accordion_U9n4kg",
@@ -1359,6 +1387,7 @@
         "group_w9EG8R",
         "accordion_CEHJQn"
       ],
+      "disabled": true,
       "name": "t:names.faqs_preset_texts",
       "settings": {
         "container": "page-width",
@@ -1673,6 +1702,7 @@
         "slide_C7myGY",
         "slide_6bjnwN"
       ],
+      "disabled": true,
       "name": "t:names.slideshow_centered",
       "settings": {
         "container": "fixed",
@@ -1740,6 +1770,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.products_combine",
       "settings": {
         "product_list": [],
@@ -2029,6 +2060,7 @@
       "block_order": [
         "marquee_rDcnRX"
       ],
+      "disabled": true,
       "name": "t:names.marquee",
       "settings": {
         "container": "page-width--full",
@@ -2435,6 +2467,7 @@
         "text_MxXVQz",
         "grid_QdpRKt"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:names.custom_section",
       "settings": {
@@ -2768,6 +2801,7 @@
         "group_bT8imD",
         "group_TetEH7"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3255,6 +3289,7 @@
         "testimonial_parallax_wa4FcL",
         "testimonial_parallax_CXxhxG"
       ],
+      "disabled": true,
       "name": "t:names.testimonials_parallax",
       "settings": {
         "color_scheme": "scheme-7",
@@ -3568,6 +3603,7 @@
         "group_j9VUPG",
         "group_q6En8n"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3680,10 +3716,12 @@
         "image_card_kEUTWL": {
           "type": "image-card",
           "name": "t:names.image_card",
+          "disabled": true,
           "settings": {
             "show_content_below": false,
             "gap": 20,
             "gap_mobile": 20,
+            "image": "shopify://shop_images/sewing-thread-and-accessories.jpg",
             "toggle_overlay": true,
             "overlay_color": "#0000001a",
             "image_ratio": "adapt",
@@ -3700,7 +3738,7 @@
             "vertical_alignment": "center",
             "horizontal_alignment_flex_direction_column": "center",
             "horizontal_alignment_mobile": "",
-            "vertical_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "column_gap": 12,
             "column_gap_mobile": 12,
             "row_gap": 32,
@@ -3808,7 +3846,7 @@
                 "icon_only": false,
                 "icon_style": "solid",
                 "mobile_full_width": false,
-                "animation_type": "none",
+                "animation_type": "fade-up",
                 "animation_delay": 250
               },
               "blocks": {}
@@ -3828,12 +3866,12 @@
             "column_gap": 0,
             "row_gap": 0,
             "enable_sticky_desktop": false,
-            "width": "custom",
+            "width": "fill",
             "custom_width": 68,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "inherit_color_scheme": false,
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-1",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -3960,8 +3998,8 @@
                 "accordion_row_VgRfzJ": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "How long does it take to process an order?",
-                    "open_row_by_default": true,
+                    "text": "How does the ordering process work?",
+                    "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
                     "width": 24,
@@ -3971,7 +4009,7 @@
                     "text_VfRwNV": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Orders are usually processed within 1–2 business days. You’ll receive a confirmation email once your order is fully prepared and ready to ship.</p>",
+                        "text": "<p>Choose your product, upload your logo or artwork, and submit your order. We'll review the details, provide a mockup if needed, and begin production after approval.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -3994,7 +4032,7 @@
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "mobile-padding-scale": 80,
-                        "animation_type": "none",
+                        "animation_type": "fade-up",
                         "animation_delay": 250
                       },
                       "blocks": {}
@@ -4018,7 +4056,7 @@
                     "text_tKxVAY": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Yes, we ship to most countries worldwide. Shipping times and rates vary by location, and all available options will be shown at checkout.</p>",
+                        "text": "<p>We currently ship to customers in the <strong>United States and Canada</strong>. Shipping rates and delivery times are calculated at checkout.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4054,7 +4092,7 @@
                 "accordion_row_awAzd8": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "What is your return policy?",
+                    "text": "What file formats do you accept?",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -4065,7 +4103,7 @@
                     "text_WXGqtt": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in original condition with tags attached for a full refund.</p>",
+                        "text": "<p>We accept <strong>PNG, JPG, PDF, AI, SVG, EPS, </strong>and <strong>PSD</strong> files. If you're unsure whether your file will work, send it over and we'll review it.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4101,7 +4139,7 @@
                 "accordion_row_r6fVEm": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "What are your sizing options?",
+                    "text": "Do I receive a mockup before production?",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -4112,7 +4150,7 @@
                     "text_kiVaET": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We offer a full range of sizes from XS to XL. Refer to our detailed size chart for accurate measurements to find your perfect fit.</p>",
+                        "text": "<p>Yes. We may provide a digital mockup for approval before production begins to ensure placement, colors, and design details are correct.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4144,13 +4182,209 @@
                   "block_order": [
                     "text_kiVaET"
                   ]
+                },
+                "accordion_row_PinbMi": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "Is there a minimum order quantity?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_AtBDYB": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>No. We can produce single items and large bulk orders.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_AtBDYB"
+                  ]
+                },
+                "accordion_row_EVWxJn": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "What decoration methods do you offer?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_gTTkr3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We offer Embroidery, 3D Puff Embroidery, Screen Printing, Heat Transfer, Patches, and Tackle Twill.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_gTTkr3"
+                  ]
+                },
+                "accordion_row_9HY4c7": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "Can I provide my own garments?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_zE4pcG": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Yes. Contact us before placing your order and we'll discuss garment requirements and pricing.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_zE4pcG"
+                  ]
+                },
+                "accordion_row_zLUJap": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "What is your custom order policy?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_Qz9JeX": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Because all items are custom-made, returns and exchanges are not accepted. If an item arrives damaged or differs from the approved design, contact us within 7 days of delivery.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_Qz9JeX"
+                  ]
                 }
               },
               "block_order": [
                 "accordion_row_VgRfzJ",
                 "accordion_row_ynWVCR",
                 "accordion_row_awAzd8",
-                "accordion_row_r6fVEm"
+                "accordion_row_r6fVEm",
+                "accordion_row_PinbMi",
+                "accordion_row_EVWxJn",
+                "accordion_row_9HY4c7",
+                "accordion_row_zLUJap"
               ]
             }
           },
@@ -4193,6 +4427,213 @@
         "padding-inline-start-mobile": 0,
         "padding-inline-end-mobile": 0
       }
+    },
+    "custom_section_HdfqFE": {
+      "type": "custom-section",
+      "blocks": {
+        "group_FdWwXy": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "column_gap": 24,
+            "row_gap": 20,
+            "enable_sticky_desktop": false,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "enable_swipe_on_mobile": false,
+            "swipe_custom_width_column": false,
+            "swipe_column_width": 76,
+            "columns_mobile": 2,
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 20,
+            "device": "desktop",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0
+          },
+          "blocks": {
+            "text_tPwRmQ": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>Still need help?</p>",
+                "highlight_style": "none",
+                "highlight_font_style": "italic",
+                "highlight_shape_color": "",
+                "highlight_text_color": "",
+                "type_preset": "h2",
+                "font": "var(--font-body--family)",
+                "font_weight": "",
+                "font_size": 15,
+                "font_size_mobile": 15,
+                "line_height": "normal",
+                "text_color": "text",
+                "text_color_gradient": "",
+                "disable_line_break_mobile": false,
+                "width": "fit-content",
+                "text_alignment": "left",
+                "width_mobile": "fit-content",
+                "text_alignment_mobile": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "mobile-padding-scale": 80,
+                "animation_type": "none",
+                "animation_delay": 250
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_tPwRmQ"
+          ]
+        },
+        "group_LKxAty": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "content_direction": "row",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "center",
+            "vertical_alignment": "center",
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "column_gap": 24,
+            "row_gap": 20,
+            "enable_sticky_desktop": false,
+            "width": "fit-content",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "enable_swipe_on_mobile": false,
+            "swipe_custom_width_column": false,
+            "swipe_column_width": 76,
+            "columns_mobile": 2,
+            "column_gap_mobile": 16,
+            "row_gap_mobile": 20,
+            "device": "desktop",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0,
+            "padding-block-start-mobile": 0,
+            "padding-block-end-mobile": 0,
+            "padding-inline-start-mobile": 0,
+            "padding-inline-end-mobile": 0
+          },
+          "blocks": {
+            "text_GELWaN": {
+              "type": "text",
+              "name": "t:names.text",
+              "settings": {
+                "text": "<p>We're here to help.</p>",
+                "highlight_style": "none",
+                "highlight_font_style": "italic",
+                "highlight_shape_color": "",
+                "highlight_text_color": "",
+                "type_preset": "rte",
+                "font": "var(--font-body--family)",
+                "font_weight": "",
+                "font_size": 15,
+                "font_size_mobile": 15,
+                "line_height": "normal",
+                "text_color": "text",
+                "text_color_gradient": "",
+                "disable_line_break_mobile": false,
+                "width": "fit-content",
+                "text_alignment": "left",
+                "width_mobile": "fit-content",
+                "text_alignment_mobile": "left",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0,
+                "mobile-padding-scale": 80,
+                "animation_type": "none",
+                "animation_delay": 250
+              },
+              "blocks": {}
+            },
+            "button_nxFVQU": {
+              "type": "button",
+              "name": "t:names.button",
+              "settings": {
+                "label": "Contact Us",
+                "link": "shopify://pages/contact",
+                "style": "primary",
+                "size": "large",
+                "icon": "caret-right",
+                "icon_only": false,
+                "icon_style": "solid",
+                "mobile_full_width": false,
+                "animation_type": "fade-up",
+                "animation_delay": 250
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "text_GELWaN",
+            "button_nxFVQU"
+          ]
+        }
+      },
+      "block_order": [
+        "group_FdWwXy",
+        "group_LKxAty"
+      ],
+      "name": "t:names.images_stack_banner",
+      "settings": {
+        "container": "page-width",
+        "content_direction": "row",
+        "vertical_on_mobile": true,
+        "horizontal_alignment": "center",
+        "vertical_alignment": "center",
+        "horizontal_alignment_flex_direction_column": "flex-start",
+        "column_gap": 24,
+        "row_gap": 12,
+        "column_gap_mobile": 12,
+        "row_gap_mobile": 12,
+        "use_color_scheme_in_container": true,
+        "color_scheme": "scheme-1",
+        "border": "none",
+        "border_width": 1,
+        "border_opacity": 100,
+        "border_radius": 20,
+        "device": "desktop",
+        "padding-block-start": 30,
+        "padding-block-end": 75,
+        "padding-inline-start": 40,
+        "padding-inline-end": 40,
+        "padding-block-start-mobile": 24,
+        "padding-block-end-mobile": 24,
+        "padding-inline-start-mobile": 20,
+        "padding-inline-end-mobile": 20
+      }
     }
   },
   "order": [
@@ -4207,6 +4648,7 @@
     "testimonials_parallax_U4fA6R",
     "custom_section_WB3EgX",
     "product_recommendations_4RKQtt",
-    "custom_section_FXkPhr"
+    "custom_section_FXkPhr",
+    "custom_section_HdfqFE"
   ]
 }
