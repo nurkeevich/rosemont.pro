@@ -1,0 +1,72 @@
+{% liquid
+  assign block_settings = block.settings
+  assign element_id = 'CustomDatePicker-' | append: block.id
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+  assign property_name = block_settings.label | default: 'Date'
+%}
+
+<div class="custom-date-picker" {{ block.shopify_attributes }}>
+  <label for="{{ element_id }}">
+    {{ property_name }}
+  </label>
+
+  <input
+    id="{{ element_id }}"
+    type="date"
+    name="properties[{{ property_name | escape }}]"
+    form="{{ product_form_id }}"
+    pattern="\d{4}-\d{2}-\d{2}"
+    min="{{ 'now' | date: '%Y-%m-%d' }}"
+  >
+</div>
+
+<script>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    const input = root?.querySelector('input[type="date"]');
+    if (!input || typeof input.showPicker !== 'function') return;
+
+    root.addEventListener('click', () => input.showPicker());
+  })();
+</script>
+
+<style>
+  .custom-date-picker {
+    margin-bottom: 16px;
+  }
+
+  .custom-date-picker label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .custom-date-picker input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Date Picker",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Field Label",
+      "default": "Date"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Date Picker",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
