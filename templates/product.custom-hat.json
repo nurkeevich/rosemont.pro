@@ -177,8 +177,8 @@
                 "show_swatches": true,
                 "show_variant_image": false,
                 "swatch_shape": "square",
-                "swatch_width": 52,
-                "swatch_height": 24,
+                "swatch_width": 74,
+                "swatch_height": 44,
                 "buttons_radius": 0,
                 "size_chart_title": "",
                 "size_chart_page": "",
@@ -225,6 +225,7 @@
             "custom_date_picker_MLxNKp": {
               "type": "custom-date-picker",
               "name": "Custom Date Picker",
+              "disabled": true,
               "settings": {
                 "label": "When do you need your project completed by?"
               },
