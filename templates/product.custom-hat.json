@@ -189,54 +189,12 @@
               },
               "blocks": {}
             },
-            "custom_variant_picker_98an3w": {
-              "type": "custom-variant-picker",
-              "name": "Custom Variant Picker",
-              "settings": {
-                "label": "Type of work",
-                "values": "Embroidery, 3D Puff, Heat Press",
-                "preselect_first_option": true,
-                "buttons_radius": 0
-              },
-              "blocks": {}
-            },
-            "custom_variant_picker_ym6XrY": {
-              "type": "custom-variant-picker",
-              "name": "Custom Variant Picker",
-              "settings": {
-                "label": "Logo Placement",
-                "values": "Center, Right, Left",
-                "preselect_first_option": true,
-                "buttons_radius": 0
-              },
-              "blocks": {}
-            },
-            "custom_variant_picker_8xWjQc": {
-              "type": "custom-variant-picker",
-              "name": "Custom Variant Picker",
-              "settings": {
-                "label": "Side stichings",
-                "values": "Right side, Left side, Back, None",
-                "preselect_first_option": false,
-                "buttons_radius": 0
-              },
-              "blocks": {}
-            },
-            "custom_date_picker_MLxNKp": {
-              "type": "custom-date-picker",
-              "name": "Custom Date Picker",
-              "disabled": true,
-              "settings": {
-                "label": "When do you need your project completed by?"
-              },
-              "blocks": {}
-            },
             "custome_multi_line_text_input_RktqwQ": {
               "type": "custome-multi-line-text-input",
               "name": "Custom Multi Line Input",
               "settings": {
                 "label": "Message",
-                "placeholder": "Please give us as much details as possible",
+                "placeholder": "Please give us as much details as possible about your order",
                 "rows": 4
               },
               "blocks": {}
@@ -977,10 +935,6 @@
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
             "variant_picker_JfgYKg",
-            "custom_variant_picker_98an3w",
-            "custom_variant_picker_ym6XrY",
-            "custom_variant_picker_8xWjQc",
-            "custom_date_picker_MLxNKp",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
