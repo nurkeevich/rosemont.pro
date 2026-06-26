@@ -108,7 +108,7 @@
                       "type": "_product-title",
                       "name": "t:names.product_title",
                       "settings": {
-                        "type_preset": "h1",
+                        "type_preset": "h4",
                         "html_tag": "h1",
                         "font": "var(--font-heading--family)",
                         "font_weight": "",
@@ -129,7 +129,7 @@
                       "settings": {
                         "show_installments": false,
                         "show_tax_info": false,
-                        "type_preset": "h3",
+                        "type_preset": "h1",
                         "padding-block-start": 0,
                         "padding-block-end": 0,
                         "padding-inline-start": 0,
