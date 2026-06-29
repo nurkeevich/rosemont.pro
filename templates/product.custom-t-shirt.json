@@ -169,13 +169,13 @@
               },
               "blocks": {}
             },
-            "custom_image_picker_y7iqwL": {
-              "type": "custom-image-picker",
-              "name": "Custom Image Picker",
+            "custom_multi_image_picker_YafMhb": {
+              "type": "custom-multi-image-picker",
+              "name": "Custom Multi Image Picker",
               "settings": {
                 "label": "Design Placement",
-                "values": "Front Center, Front Left Chess, Back Center, Back Neck, Left Sleeve, Right Sleeve",
-                "preselect_first_option": true,
+                "values": "Front Center, Front Left Chest, Back Center, Back Neck, Left Sleeve, Right Sleeve",
+                "max_selections": 0,
                 "option_1_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.05_AM.png",
                 "option_2_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.16_AM.png",
                 "option_3_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.37_AM.png",
@@ -973,7 +973,7 @@
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
             "variant_picker_wa3dGh",
-            "custom_image_picker_y7iqwL",
+            "custom_multi_image_picker_YafMhb",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
@@ -4196,6 +4196,7 @@
         "image_card_kEUTWL",
         "group_MxbTQz"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:names.faqs_preset_banner",
       "settings": {
