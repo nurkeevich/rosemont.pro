@@ -1,0 +1,341 @@
+{% liquid
+  assign block_settings = block.settings
+  assign product_form_id = 'BuyButtons-ProductForm-' | append: section.id
+  assign property_name = block_settings.label | default: 'Option'
+  assign field_name = 'CustomMultiImagePicker-' | append: block.id
+  assign values_raw = block_settings.values | default: 'Option 1, Option 2, Option 3'
+  assign values_normalized = values_raw | newline_to_br | replace: '<br />', ',' | split: ','
+  assign max_selections = block_settings.max_selections | default: 0
+%}
+
+<div
+  id="CustomMultiImagePicker-{{ block.id }}"
+  class="custom-multi-image-picker"
+  data-custom-multi-image-picker
+  data-max-selections="{{ max_selections }}"
+  style="--custom-multi-image-picker-card-width: {{ block_settings.card_width }}px; --custom-multi-image-picker-radius: {{ block_settings.image_radius }}px;"
+  {{ block.shopify_attributes }}
+>
+  <fieldset class="custom-multi-image-picker__fieldset">
+    <legend class="custom-multi-image-picker__legend">
+      <span class="custom-multi-image-picker__legend-label">{{ property_name | escape }}:</span>
+      <span class="custom-multi-image-picker__legend-value color-subtext" data-custom-multi-image-picker-value></span>
+    </legend>
+
+    <div class="custom-multi-image-picker__grid">
+      {%- for value in values_normalized -%}
+        {%- assign value_stripped = value | strip -%}
+        {%- if value_stripped != blank -%}
+          {%- liquid
+            assign option_image = blank
+            case forloop.index
+              when 1
+                assign option_image = block_settings.option_1_image
+              when 2
+                assign option_image = block_settings.option_2_image
+              when 3
+                assign option_image = block_settings.option_3_image
+              when 4
+                assign option_image = block_settings.option_4_image
+              when 5
+                assign option_image = block_settings.option_5_image
+              when 6
+                assign option_image = block_settings.option_6_image
+            endcase
+          -%}
+
+          <label class="custom-multi-image-picker__card focus-within--absolute">
+            <input
+              type="checkbox"
+              name="{{ field_name }}"
+              form="{{ product_form_id }}"
+              value="{{ value_stripped | escape }}"
+              data-property-input
+              aria-label="{{ value_stripped | escape }}"
+            >
+            <span class="custom-multi-image-picker__media">
+              {%- if option_image != blank -%}
+                {{
+                  option_image
+                  | image_url: width: 240
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '120, 160, 240',
+                    sizes: '(max-width: 749px) 80px, 96px',
+                    alt: value_stripped
+                }}
+              {%- else -%}
+                <span class="custom-multi-image-picker__placeholder">{{ value_stripped | escape }}</span>
+              {%- endif -%}
+              <span class="custom-multi-image-picker__check" aria-hidden="true">
+                {% render 'icon', icon: 'check', size: 'small' %}
+              </span>
+            </span>
+            <span class="custom-multi-image-picker__label">{{ value_stripped | escape }}</span>
+          </label>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </fieldset>
+
+  <input
+    type="hidden"
+    name="properties[{{ property_name | escape }}]"
+    form="{{ product_form_id }}"
+    value=""
+    data-custom-multi-image-picker-hidden
+  >
+</div>
+
+<script>
+  (() => {
+    const root = document.currentScript?.previousElementSibling;
+    if (!root?.matches('[data-custom-multi-image-picker]')) return;
+
+    const valueLabel = root.querySelector('[data-custom-multi-image-picker-value]');
+    const hiddenInput = root.querySelector('[data-custom-multi-image-picker-hidden]');
+    const checkboxes = root.querySelectorAll('[data-property-input]');
+    const maxSelections = parseInt(root.dataset.maxSelections, 10) || 0;
+
+    const updateSelection = () => {
+      const selected = [...root.querySelectorAll('[data-property-input]:checked')].map((input) => input.value);
+      if (valueLabel) valueLabel.textContent = selected.join(', ');
+      if (hiddenInput) hiddenInput.value = selected.join(', ');
+    };
+
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        if (!checkbox.checked || maxSelections <= 0) {
+          updateSelection();
+          return;
+        }
+
+        const checkedCount = root.querySelectorAll('[data-property-input]:checked').length;
+        if (checkedCount > maxSelections) {
+          checkbox.checked = false;
+          return;
+        }
+
+        updateSelection();
+      });
+    });
+  })();
+</script>
+
+<style>
+  #CustomMultiImagePicker-{{ block.id }} {
+    margin-bottom: 16px;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+    padding: 0;
+    font-weight: 600;
+    font-size: 14px;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: var(--custom-multi-image-picker-card-width, 80px);
+    cursor: pointer;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__card input[type='checkbox'] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__media {
+    position: relative;
+    display: block;
+    border: 2px solid #ddd;
+    border-radius: var(--custom-multi-image-picker-radius, 6px);
+    overflow: hidden;
+    background: #f7f7f7;
+    transition: border-color 0.2s ease;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    padding: 6px;
+    font-size: 10px;
+    line-height: 1.2;
+    text-align: center;
+    color: #666;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__check {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__check .icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__label {
+    display: block;
+    margin-top: 4px;
+    padding: 4px 2px;
+    border-radius: 4px;
+    font-size: 11px;
+    line-height: 1.2;
+    text-align: center;
+    background: #f0f0f0;
+    color: rgb(var(--color-foreground));
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__card:has(:checked) .custom-multi-image-picker__media {
+    border-color: rgb(var(--color-foreground));
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__card:has(:checked) .custom-multi-image-picker__check {
+    display: flex;
+  }
+
+  #CustomMultiImagePicker-{{ block.id }} .custom-multi-image-picker__card:has(:checked) .custom-multi-image-picker__label {
+    background: rgb(var(--color-foreground));
+    color: rgb(var(--color-background));
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Custom Multi Image Picker",
+  "tag": null,
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Field label",
+      "default": "Side Stitchings"
+    },
+    {
+      "type": "textarea",
+      "id": "values",
+      "label": "Options",
+      "default": "Right Side, Left Side, Back",
+      "info": "Comma-separated or one option per line. Order must match the images below."
+    },
+    {
+      "type": "range",
+      "id": "max_selections",
+      "label": "Maximum selections",
+      "min": 0,
+      "max": 6,
+      "step": 1,
+      "default": 0,
+      "info": "0 = no limit"
+    },
+    {
+      "type": "header",
+      "content": "Option images"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_1_image",
+      "label": "Option 1 image"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_2_image",
+      "label": "Option 2 image"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_3_image",
+      "label": "Option 3 image"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_4_image",
+      "label": "Option 4 image"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_5_image",
+      "label": "Option 5 image"
+    },
+    {
+      "type": "image_picker",
+      "id": "option_6_image",
+      "label": "Option 6 image"
+    },
+    {
+      "type": "header",
+      "content": "Appearance"
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "label": "Card width",
+      "min": 56,
+      "max": 140,
+      "step": 4,
+      "unit": "px",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "image_radius",
+      "label": "Image border radius",
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Multi Image Picker",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
