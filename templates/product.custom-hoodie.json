@@ -157,8 +157,8 @@
                 "show_swatches": true,
                 "show_variant_image": false,
                 "swatch_shape": "square",
-                "swatch_width": 52,
-                "swatch_height": 24,
+                "swatch_width": 74,
+                "swatch_height": 44,
                 "buttons_radius": 0,
                 "size_chart_title": "",
                 "size_chart_page": "",
@@ -239,7 +239,7 @@
               },
               "block_order": []
             },
-            "group_ngeVTK": {
+            "group_EXRnRR": {
               "type": "group",
               "name": "Policies",
               "settings": {
@@ -265,7 +265,7 @@
                 "swipe_custom_width_column": false,
                 "swipe_column_width": 76,
                 "columns_mobile": 2,
-                "column_gap_mobile": 12,
+                "column_gap_mobile": 36,
                 "row_gap_mobile": 12,
                 "device": "desktop",
                 "padding-block-start": 0,
@@ -278,7 +278,7 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {
-                "group_kmCAJc": {
+                "group_LCPXVq": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -317,7 +317,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "icon_8nYx8X": {
+                    "icon_xdpawF": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -330,11 +330,11 @@
                       },
                       "blocks": {}
                     },
-                    "text_3JgwqJ": {
+                    "text_dkTCXz": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Free shipping</p>",
+                        "text": "<p>Fast Turnaround</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -364,11 +364,11 @@
                     }
                   },
                   "block_order": [
-                    "icon_8nYx8X",
-                    "text_3JgwqJ"
+                    "icon_xdpawF",
+                    "text_dkTCXz"
                   ]
                 },
-                "group_tDdQwH": {
+                "group_Bg4AQp": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -407,11 +407,11 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "icon_UwbpmT": {
+                    "icon_R7LCYP": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
-                        "icon": "arrow-up-left-down",
+                        "icon": "check",
                         "icon_size": "custom-size",
                         "width": 32,
                         "width_mobile": 32,
@@ -420,11 +420,11 @@
                       },
                       "blocks": {}
                     },
-                    "text_VrT8cz": {
+                    "text_LGhtwL": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
-                        "text": "<p>Easy return</p>",
+                        "text": "<p>Mockup Approval</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -454,11 +454,11 @@
                     }
                   },
                   "block_order": [
-                    "icon_UwbpmT",
-                    "text_VrT8cz"
+                    "icon_R7LCYP",
+                    "text_LGhtwL"
                   ]
                 },
-                "group_wXJd6h": {
+                "group_b3h6rK": {
                   "type": "group",
                   "name": "t:names.group",
                   "settings": {
@@ -497,7 +497,7 @@
                     "padding-inline-end-mobile": 0
                   },
                   "blocks": {
-                    "icon_7CdXmV": {
+                    "icon_r9eW4a": {
                       "type": "icon",
                       "name": "t:names.icon",
                       "settings": {
@@ -510,7 +510,7 @@
                       },
                       "blocks": {}
                     },
-                    "text_YPaWtU": {
+                    "text_H4DX9L": {
                       "type": "text",
                       "name": "t:names.text",
                       "settings": {
@@ -544,15 +544,15 @@
                     }
                   },
                   "block_order": [
-                    "icon_7CdXmV",
-                    "text_YPaWtU"
+                    "icon_r9eW4a",
+                    "text_H4DX9L"
                   ]
                 }
               },
               "block_order": [
-                "group_kmCAJc",
-                "group_tDdQwH",
-                "group_wXJd6h"
+                "group_LCPXVq",
+                "group_Bg4AQp",
+                "group_b3h6rK"
               ]
             },
             "pickup_availability_CgeNxU": {
@@ -639,7 +639,7 @@
               },
               "blocks": {}
             },
-            "accordion_U9n4kg": {
+            "accordion_zezULF": {
               "type": "accordion",
               "name": "t:names.accordion",
               "settings": {
@@ -665,57 +665,10 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_XENRWn": {
+                "accordion_row_A9nJYc": {
                   "type": "_accordion-row",
                   "settings": {
                     "text": "Return policy",
-                    "open_row_by_default": true,
-                    "icon": "none",
-                    "icon_size": "extra-large",
-                    "width": 24,
-                    "width_mobile": 24
-                  },
-                  "blocks": {
-                    "text_NhECK8": {
-                      "type": "text",
-                      "settings": {
-                        "text": "<p>We accept returns within 30 days of purchase. Please note that all items must be returned in their original condition, including all tags and packaging. Shipping costs are non-refundable.</p>",
-                        "highlight_style": "none",
-                        "highlight_font_style": "italic",
-                        "highlight_shape_color": "",
-                        "highlight_text_color": "",
-                        "type_preset": "rte",
-                        "font": "var(--font-body--family)",
-                        "font_weight": "",
-                        "font_size": 15,
-                        "font_size_mobile": 15,
-                        "line_height": "normal",
-                        "text_color": "subtext",
-                        "text_color_gradient": "",
-                        "disable_line_break_mobile": false,
-                        "width": "fit-content",
-                        "text_alignment": "left",
-                        "width_mobile": "fit-content",
-                        "text_alignment_mobile": "left",
-                        "padding-block-start": 0,
-                        "padding-block-end": 0,
-                        "padding-inline-start": 0,
-                        "padding-inline-end": 0,
-                        "mobile-padding-scale": 80,
-                        "animation_type": "none",
-                        "animation_delay": 250
-                      },
-                      "blocks": {}
-                    }
-                  },
-                  "block_order": [
-                    "text_NhECK8"
-                  ]
-                },
-                "accordion_row_eMehRb": {
-                  "type": "_accordion-row",
-                  "settings": {
-                    "text": "Shipping",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -723,10 +676,10 @@
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_JNT7ew": {
+                    "text_BhYfmW": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We offer free shipping on all orders over $100. Orders under $100 will be charged a flat rate of $10.</p>",
+                        "text": "<p>Because all products are custom-made to your specifications, we do not accept returns or exchanges on custom orders once production has begun.</p><p>If there is an issue caused by us, such as:</p><ul><li>Incorrect item received</li><li>Decoration applied differently than approved mockup</li><li>Manufacturing defect</li><li>Damaged item upon delivery</li></ul><p>Please contact us within <strong>7 days of receiving your order</strong>, and we will review the issue and work with you to provide a replacement or appropriate solution.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -756,13 +709,13 @@
                     }
                   },
                   "block_order": [
-                    "text_JNT7ew"
+                    "text_BhYfmW"
                   ]
                 },
-                "accordion_row_iXty6f": {
+                "accordion_row_rD6NWF": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "Manufacturing",
+                    "text": "Production Timeline",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -770,10 +723,10 @@
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_gd3Lty": {
+                    "text_KF7eE7": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Our manufacturing blends craftsmanship and innovation — ensuring every piece is made with precision, quality materials, and sustainable practices for lasting style.</p>",
+                        "text": "<p>Small orders are typically produced and shipped within <strong>1–2 business days</strong> after artwork approval. Larger orders may require additional production time depending on quantity and decoration method.</p><p>Estimated production times:</p><ul><li><strong>1–24 pieces:</strong> 1–2 business days<br/></li><li><strong>25–99 pieces:</strong> 3–5 business days<br/></li><li><strong>100+ pieces:</strong> Custom production timeline provided with your quote<br/></li></ul><p>Once shipped, delivery typically takes <strong>1–5 business days</strong> depending on destination and shipping method.</p><p>Tracking information will be provided when your order ships.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -803,14 +756,61 @@
                     }
                   },
                   "block_order": [
-                    "text_gd3Lty"
+                    "text_KF7eE7"
+                  ]
+                },
+                "accordion_row_gdUj4Q": {
+                  "type": "_accordion-row",
+                  "settings": {
+                    "text": "Production Process",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_3F9wYX": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>For the best results, upload high-quality PNG, PDF, AI, SVG, EPS, or PSD files. If your artwork requires adjustments or digitizing, we will contact you before production begins.</p><h6><strong>Process steps</strong></h6><ul><li>Submit your order and artwork</li><li>We review your design and provide a mockup for your approval</li><li>You approve the final design</li><li>We produce and ship your order</li></ul>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "subtext",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_3F9wYX"
                   ]
                 }
               },
               "block_order": [
-                "accordion_row_XENRWn",
-                "accordion_row_eMehRb",
-                "accordion_row_iXty6f"
+                "accordion_row_A9nJYc",
+                "accordion_row_rD6NWF",
+                "accordion_row_gdUj4Q"
               ]
             },
             "product_share_9eDTGb": {
@@ -831,6 +831,7 @@
             "promotion_alert_Wp4geP": {
               "type": "_promotion-alert",
               "name": "t:names.promotion_alert",
+              "disabled": true,
               "settings": {
                 "color": "#1469e8",
                 "border_radius": 10,
@@ -960,13 +961,13 @@
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
             "buy_buttons_rhMNwM",
-            "group_ngeVTK",
+            "group_EXRnRR",
             "pickup_availability_CgeNxU",
             "product_video_testimonials_a37eGn",
             "divider_RyxXPA",
             "custom_collabsible_text_8GTfAg",
             "divider_QdtV3G",
-            "accordion_U9n4kg",
+            "accordion_zezULF",
             "product_share_9eDTGb",
             "promotion_alert_Wp4geP",
             "product_recommendations_CQcChJ"
@@ -1365,6 +1366,7 @@
         "group_w9EG8R",
         "accordion_CEHJQn"
       ],
+      "disabled": true,
       "name": "t:names.faqs_preset_texts",
       "settings": {
         "container": "page-width",
@@ -1679,6 +1681,7 @@
         "slide_C7myGY",
         "slide_6bjnwN"
       ],
+      "disabled": true,
       "name": "t:names.slideshow_centered",
       "settings": {
         "container": "fixed",
@@ -1746,6 +1749,7 @@
           ]
         }
       },
+      "disabled": true,
       "name": "t:names.products_combine",
       "settings": {
         "product_list": [],
@@ -2035,6 +2039,7 @@
       "block_order": [
         "marquee_rDcnRX"
       ],
+      "disabled": true,
       "name": "t:names.marquee",
       "settings": {
         "container": "page-width--full",
@@ -2441,6 +2446,7 @@
         "text_MxXVQz",
         "grid_QdpRKt"
       ],
+      "disabled": true,
       "custom_css": [],
       "name": "t:names.custom_section",
       "settings": {
@@ -2774,6 +2780,7 @@
         "group_bT8imD",
         "group_TetEH7"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3261,6 +3268,7 @@
         "testimonial_parallax_wa4FcL",
         "testimonial_parallax_CXxhxG"
       ],
+      "disabled": true,
       "name": "t:names.testimonials_parallax",
       "settings": {
         "color_scheme": "scheme-7",
@@ -3574,6 +3582,7 @@
         "group_j9VUPG",
         "group_q6En8n"
       ],
+      "disabled": true,
       "name": "t:names.custom_section",
       "settings": {
         "container": "page-width",
@@ -3680,12 +3689,13 @@
         "custom_columns": ""
       }
     },
-    "custom_section_FXkPhr": {
+    "custom_section_cx3ybU": {
       "type": "custom-section",
       "blocks": {
-        "image_card_kEUTWL": {
+        "image_card_MGPeBz": {
           "type": "image-card",
           "name": "t:names.image_card",
+          "disabled": true,
           "settings": {
             "show_content_below": false,
             "gap": 20,
@@ -3706,7 +3716,7 @@
             "vertical_alignment": "center",
             "horizontal_alignment_flex_direction_column": "center",
             "horizontal_alignment_mobile": "",
-            "vertical_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
             "column_gap": 12,
             "column_gap_mobile": 12,
             "row_gap": 32,
@@ -3814,7 +3824,7 @@
                 "icon_only": false,
                 "icon_style": "solid",
                 "mobile_full_width": false,
-                "animation_type": "none",
+                "animation_type": "fade-up",
                 "animation_delay": 250
               },
               "blocks": {}
@@ -3822,7 +3832,7 @@
           },
           "block_order": []
         },
-        "group_MxbTQz": {
+        "group_9wyPzj": {
           "type": "group",
           "name": "t:names.group",
           "settings": {
@@ -3834,12 +3844,12 @@
             "column_gap": 0,
             "row_gap": 0,
             "enable_sticky_desktop": false,
-            "width": "custom",
+            "width": "fill",
             "custom_width": 68,
             "width_mobile": "fill",
             "custom_width_mobile": 100,
             "inherit_color_scheme": false,
-            "color_scheme": "scheme-2",
+            "color_scheme": "scheme-1",
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
@@ -3861,7 +3871,7 @@
             "padding-inline-end-mobile": 16
           },
           "blocks": {
-            "group_cipxHr": {
+            "group_H3mrUN": {
               "type": "group",
               "name": "t:names.section_header_vertical",
               "settings": {
@@ -3900,7 +3910,7 @@
                 "padding-inline-end-mobile": 0
               },
               "blocks": {
-                "text_tGTRjE": {
+                "text_P68AMC": {
                   "type": "text",
                   "name": "t:names.heading",
                   "settings": {
@@ -3934,10 +3944,10 @@
                 }
               },
               "block_order": [
-                "text_tGTRjE"
+                "text_P68AMC"
               ]
             },
-            "accordion_gfNgJC": {
+            "accordion_FLpQpF": {
               "type": "accordion",
               "name": "t:names.accordion",
               "settings": {
@@ -3963,21 +3973,21 @@
                 "padding-inline-end": 0
               },
               "blocks": {
-                "accordion_row_VgRfzJ": {
+                "accordion_row_giXfF9": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "How long does it take to process an order?",
-                    "open_row_by_default": true,
+                    "text": "How does the ordering process work?",
+                    "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
                     "width": 24,
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_VfRwNV": {
+                    "text_xmzM4B": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Orders are usually processed within 1–2 business days. You’ll receive a confirmation email once your order is fully prepared and ready to ship.</p>",
+                        "text": "<p>Choose your product, upload your logo or artwork, and submit your order. We'll review the details, provide a mockup if needed, and begin production after approval.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4000,17 +4010,17 @@
                         "padding-inline-start": 0,
                         "padding-inline-end": 0,
                         "mobile-padding-scale": 80,
-                        "animation_type": "none",
+                        "animation_type": "fade-up",
                         "animation_delay": 250
                       },
                       "blocks": {}
                     }
                   },
                   "block_order": [
-                    "text_VfRwNV"
+                    "text_xmzM4B"
                   ]
                 },
-                "accordion_row_ynWVCR": {
+                "accordion_row_bazHEk": {
                   "type": "_accordion-row",
                   "settings": {
                     "text": "Do you ship internationally?",
@@ -4021,10 +4031,10 @@
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_tKxVAY": {
+                    "text_F4m3WH": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>Yes, we ship to most countries worldwide. Shipping times and rates vary by location, and all available options will be shown at checkout.</p>",
+                        "text": "<p>We currently ship to customers in the <strong>United States and Canada</strong>. Shipping rates and delivery times are calculated at checkout.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4054,13 +4064,13 @@
                     }
                   },
                   "block_order": [
-                    "text_tKxVAY"
+                    "text_F4m3WH"
                   ]
                 },
-                "accordion_row_awAzd8": {
+                "accordion_row_BDKq6H": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "What is your return policy?",
+                    "text": "What file formats do you accept?",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -4068,10 +4078,10 @@
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_WXGqtt": {
+                    "text_tzgKbL": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We accept returns within 30 days of purchase. Items must be unworn, unwashed, and in original condition with tags attached for a full refund.</p>",
+                        "text": "<p>We accept <strong>PNG, JPG, PDF, AI, SVG, EPS, </strong>and <strong>PSD</strong> files. If you're unsure whether your file will work, send it over and we'll review it.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4101,13 +4111,13 @@
                     }
                   },
                   "block_order": [
-                    "text_WXGqtt"
+                    "text_tzgKbL"
                   ]
                 },
-                "accordion_row_r6fVEm": {
+                "accordion_row_gFXMxA": {
                   "type": "_accordion-row",
                   "settings": {
-                    "text": "What are your sizing options?",
+                    "text": "Do I receive a mockup before production?",
                     "open_row_by_default": false,
                     "icon": "none",
                     "icon_size": "extra-large",
@@ -4115,10 +4125,10 @@
                     "width_mobile": 24
                   },
                   "blocks": {
-                    "text_kiVaET": {
+                    "text_p8dFfV": {
                       "type": "text",
                       "settings": {
-                        "text": "<p>We offer a full range of sizes from XS to XL. Refer to our detailed size chart for accurate measurements to find your perfect fit.</p>",
+                        "text": "<p>Yes. We may provide a digital mockup for approval before production begins to ensure placement, colors, and design details are correct.</p>",
                         "highlight_style": "none",
                         "highlight_font_style": "italic",
                         "highlight_shape_color": "",
@@ -4148,27 +4158,223 @@
                     }
                   },
                   "block_order": [
-                    "text_kiVaET"
+                    "text_p8dFfV"
+                  ]
+                },
+                "accordion_row_Lw9D4N": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "Is there a minimum order quantity?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_rV6icK": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>No. We can produce single items and large bulk orders.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_rV6icK"
+                  ]
+                },
+                "accordion_row_cMfjVp": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "What decoration methods do you offer?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_aBXeA9": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>We offer Embroidery, 3D Puff Embroidery, Screen Printing, Heat Transfer, Patches, and Tackle Twill.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_aBXeA9"
+                  ]
+                },
+                "accordion_row_86KPNa": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "Can I provide my own garments?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_JXiah3": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Yes. Contact us before placing your order and we'll discuss garment requirements and pricing.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_JXiah3"
+                  ]
+                },
+                "accordion_row_jyx6Xb": {
+                  "type": "_accordion-row",
+                  "name": "t:names.accordion_row",
+                  "settings": {
+                    "text": "What is your custom order policy?",
+                    "open_row_by_default": false,
+                    "icon": "none",
+                    "icon_size": "extra-large",
+                    "width": 24,
+                    "width_mobile": 24
+                  },
+                  "blocks": {
+                    "text_PVxCCe": {
+                      "type": "text",
+                      "settings": {
+                        "text": "<p>Because all items are custom-made, returns and exchanges are not accepted. If an item arrives damaged or differs from the approved design, contact us within 7 days of delivery.</p>",
+                        "highlight_style": "none",
+                        "highlight_font_style": "italic",
+                        "highlight_shape_color": "",
+                        "highlight_text_color": "",
+                        "type_preset": "rte",
+                        "font": "var(--font-body--family)",
+                        "font_weight": "",
+                        "font_size": 15,
+                        "font_size_mobile": 15,
+                        "line_height": "normal",
+                        "text_color": "text",
+                        "text_color_gradient": "",
+                        "disable_line_break_mobile": false,
+                        "width": "fit-content",
+                        "text_alignment": "left",
+                        "width_mobile": "fit-content",
+                        "text_alignment_mobile": "left",
+                        "padding-block-start": 0,
+                        "padding-block-end": 0,
+                        "padding-inline-start": 0,
+                        "padding-inline-end": 0,
+                        "mobile-padding-scale": 80,
+                        "animation_type": "none",
+                        "animation_delay": 250
+                      },
+                      "blocks": {}
+                    }
+                  },
+                  "block_order": [
+                    "text_PVxCCe"
                   ]
                 }
               },
               "block_order": [
-                "accordion_row_VgRfzJ",
-                "accordion_row_ynWVCR",
-                "accordion_row_awAzd8",
-                "accordion_row_r6fVEm"
+                "accordion_row_giXfF9",
+                "accordion_row_bazHEk",
+                "accordion_row_BDKq6H",
+                "accordion_row_gFXMxA",
+                "accordion_row_Lw9D4N",
+                "accordion_row_cMfjVp",
+                "accordion_row_86KPNa",
+                "accordion_row_jyx6Xb"
               ]
             }
           },
           "block_order": [
-            "group_cipxHr",
-            "accordion_gfNgJC"
+            "group_H3mrUN",
+            "accordion_FLpQpF"
           ]
         }
       },
       "block_order": [
-        "image_card_kEUTWL",
-        "group_MxbTQz"
+        "image_card_MGPeBz",
+        "group_9wyPzj"
       ],
       "custom_css": [],
       "name": "t:names.faqs_preset_banner",
@@ -4213,6 +4419,6 @@
     "testimonials_parallax_U4fA6R",
     "custom_section_WB3EgX",
     "product_recommendations_4RKQtt",
-    "custom_section_FXkPhr"
+    "custom_section_cx3ybU"
   ]
 }
