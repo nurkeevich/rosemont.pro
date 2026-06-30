@@ -169,6 +169,23 @@
               },
               "blocks": {}
             },
+            "custom_multi_image_picker_RrzPxJ": {
+              "type": "custom-multi-image-picker",
+              "name": "Custom Multi Image Picker",
+              "settings": {
+                "label": "Design Placement",
+                "values": "Front Center, Front Left Chest, Back Center, Left Sleeve, Right Sleeve",
+                "max_selections": 0,
+                "option_1_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.05_AM.png",
+                "option_2_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.16_AM.png",
+                "option_3_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.35.37_AM.png",
+                "option_4_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.36.02_AM.png",
+                "option_5_image": "shopify://shop_images/Screenshot_2026-06-26_at_12.36.12_AM.png",
+                "card_width": 100,
+                "image_radius": 6
+              },
+              "blocks": {}
+            },
             "custome_multi_line_text_input_RktqwQ": {
               "type": "custome-multi-line-text-input",
               "name": "Custom Multi Line Input",
@@ -957,6 +974,7 @@
             "breadcrumbs_4zRHqF",
             "product_information_group_zx4NRb",
             "variant_picker_pYTnAQ",
+            "custom_multi_image_picker_RrzPxJ",
             "custome_multi_line_text_input_RktqwQ",
             "custom_file_upload_ya4Ti3",
             "product_inventory_VDFAce",
